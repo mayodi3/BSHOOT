@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEAT SHOOTER</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="assets/UI/loading.gif" id="loading" />
+    <!-- First Page -->
+    <div id="firstPage">
+      <img id="play" src="assets/UI/play.png" />
+      <img src="assets/logo/GameLogo.png" id="gameLogo" />
+      <h2 id="text">CLICK HERE TO PLAY !</h2>
+      <img src="assets/UI/arrowDown.gif" id="arrowDown1" />
+    </div>
+
+    <!-- Second page -->
+    <div id="largeContainer" class="hide">
+      <img src="assets/UI/arrowDown.gif" id="arrowDown2" />
+      <img src="assets/backgrounds/MenuBg.png" id="MenuBg" />
+
+      <div id="buttonsContainer">
+        <div id="controls">
+          <img src="assets/UI/levelButton.png" id="levelButton" />
+        </div>
+        <div id="controls">
+          <img src="assets/UI/exit.png" id="exitLevel" />
+        </div>
+      </div>
+    </div>
+    <!-- Third Page -->
+    <div class="level-buttons hide">
+      <div>
+        <p id="paragraph">1</p>
+        <img src="assets/UI/level1.png" id="level1Button" />
+      </div>
+      <div>
+        <p id="paragraph">2</p>
+        <img src="assets/UI/level1.png" id="level2Button" />
+      </div>
+      <div>
+        <p id="paragraph">3</p>
+        <img src="assets/UI/level1.png" id="level3Button" />
+      </div>
+      <div>
+        <p id="paragraph">4</p>
+        <img src="assets/UI/level1.png" id="level4Button" />
+      </div>
+      <div>
+        <p id="paragraph">5</p>
+        <img src="assets/UI/level1.png" id="level5Button" />
+      </div>
+      <div>
+        <p id="paragraph">6</p>
+        <img src="assets/UI/level1.png" id="level6Button" />
+      </div>
+      <div>
+        <p id="paragraph">7</p>
+        <img src="assets/UI/level1.png" id="level7Button" />
+      </div>
+    </div>
+
+    <!-- Audio Data Setup -->
+    <div id="audio" class="hide">
+      <input type="file" id="fileUpload" />
+      <audio id="audio1" controls autoplay></audio>
+    </div>
+
+    <!-- Counter Page -->
+    <img src="assets/UI/counter.gif" id="counter" class="hide" />
+    <audio
+      src="assets/sounds/counter.mp3"
+      id="audioCounter"
+      class="hide"
+    ></audio>
+
+    <!-- Fourth Page -->
+    <canvas id="canvas1"></canvas>
+    <div class="controls hide">
+      <button id="smallaserBtn" class="laser laser-active-hover">S</button>
+      <button id="biglaserBtn" class="laser laser-active-hover">B</button>
+      <img src="assets/UI/pause.png" id="pause" />
+      <img src="assets/UI/playbutton.png" id="playbutton" />
+      <button id="menubuttons">MAIN</button>
+      <button id="exitMain">EXIT</button>
+    </div>
+
+    <!-- Invisible ones -->
+    <div class="assets hide">
+      <!-- Enemies -->
+      <img src="assets/enemies/beetle.png" id="beetle" />
+      <img src="assets/enemies/rhinocrack.png" id="rhinocrack" />
+      <img src="assets/enemies/eagleshoot.png" id="eagleshoot" />
+      <img src="assets/enemies/lobsterburst.png" id="lobsterburst" />
+      <img src="assets/enemies/phantom.png" id="phantom" />
+      <img src="assets/enemies/squidward.png" id="squidward" />
+      <img src="assets/enemies/locust.png" id="locust" />
+      <img
+        src="assets/utilities/eagleshootprojectile.png"
+        id="eagleshootprojectile"
+      />
+      <!-- Player -->
+      <img src="assets/players/ship.png" id="ship" />
+      <img src="assets/utilities/shipJets.png" id="shipJets" />
+      <!-- Boss -->
+      <img src="assets/enemies/boss.png" id="boss" />
+      <img src="assets/UI/gameOver.png" id="gameOver" />
+    </div>
+
+    <!-- Sounds of the game -->
+    <div id="sounds" style="display: none">
+      <audio src="assets/sounds/boss.wav" id="bossound"></audio>
+      <audio src="assets/sounds/click.wav" id="click"></audio>
+      <audio src="assets/sounds/lose.mp3" id="lose"></audio>
+      <audio src="assets/sounds/newgame.mp3" id="newGame"></audio>
+      <audio src="assets/sounds/win.mp3" id="win"></audio>
+    </div>
+
+    <script src="engine.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+/* Reset and base styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Body styling to ensure all elements fit the page correctly */
+body {
+  background: url("assets/backgrounds/bg.png");
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Loading page */
+#loading {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  /* border-radius: 50%; */
+}
+
+/* First page */
+#play {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#arrowDown1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#arrowDown2 {
+  display: none;
+}
+#text {
+  font-family: "Bangers";
+  font-size: xx-large;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  color: rgb(0, 217, 255);
+  transform: translate(-50%, -50%);
+}
+
+/* Canvas styling */
+#canvas1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+}
+
+/* Positioning of the game logo */
+#gameLogo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  height: 200px;
+}
+/* Positioning of the menu background */
+#MenuBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Container positioning */
+#buttonsContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+/* Control hover effect */
+#controls:hover {
+  transform: scale(1.2);
+}
+
+/* Button positioning */
+#pause {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#playbutton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+#menubuttons {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: white;
+  background: transparent;
+  border: 10px solid rgb(103, 184, 241);
+  border-radius: 10vw;
+  width: 50vw;
+  height: 10vh;
+  font-family: "Bangers";
+  font-size: larger;
+}
+#menubuttons:hover {
+  background: rgb(103, 184, 241);
+}
+#exitMain {
+  display: none;
+}
+#exitMain {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: white;
+  background: transparent;
+  border: 10px solid rgb(103, 184, 241);
+  border-radius: 10vw;
+  width: 50vw;
+  height: 10vh;
+  font-family: "Bangers";
+  font-size: larger;
+}
+#exitMain:hover {
+  background: rgb(103, 184, 241);
+}
+
+.laser {
+  color: rgb(103, 184, 241);
+  position: absolute;
+  font-size: 30px;
+  border-radius: 50%;
+  bottom: 20px;
+  background: transparent;
+  border: 3px solid rgb(103, 184, 241);
+  width: 70px;
+  height: 70px;
+}
+.laser .laser-active-hover {
+  color: black;
+  background-color: aqua;
+}
+#smallaserBtn {
+  left: 20px;
+}
+#biglaserBtn {
+  right: 20px;
+}
+
+/* Level button styling */
+.level-buttons {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  width: 100vw;
+  height: 100%;
+  color: white;
+  font-family: "Bangers";
+  font-size: 40px;
+  text-align: center;
+}
+#paragraph {
+  position: relative;
+  z-index: 1;
+  left: -4px;
+  top: 80px;
+}
+
+.level-buttons div:hover {
+  transform: scale(0.8);
+}
+
+.hide {
+  display: none;
+}
+#counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 520px) {
+  #gameLogo {
+    top: 20%;
+    z-index: 1;
+    width: 450px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 520px) {
+  #gameLogo {
+    top: 20%;
+    z-index: 1;
+    width: 450px;
+    height: 400px;
+  }
+  #arrowDown2 {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
